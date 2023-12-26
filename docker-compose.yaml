@@ -112,9 +112,9 @@ services:
       - netmaker
     restart: unless-stopped
     volumes:
-      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf # need to pull conf file from github before running (under docker/mosquitto.conf)
-      - ./mosquitto_data:/mosquitto/data
-      - ./mosquitto_logs:/mosquitto/log
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf # need to pull conf file from github before running (under docker/mosquitto.conf)
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/logs:/mosquitto/log
       - ./netmaker_shared_certs:/mosquitto/certs
     expose:
       - "8883"
